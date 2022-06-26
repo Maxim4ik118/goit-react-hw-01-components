@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <TransactionHistory items={transactionsList} />
       <Profile {...profileData} />
-      <Statistics stats={statsData} />
+      <Statistics title="Upload stats" stats={statsData} />
       <FriendsList friends={friendsData} />
     </div>
   );

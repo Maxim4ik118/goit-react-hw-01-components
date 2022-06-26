@@ -1,10 +1,10 @@
 import { PropTypes } from 'prop-types';
 import { StyledStatistics } from './Styled';
 
-function Statistics({ stats }) {
+function Statistics({ title, stats = [] }) {
   return (
     <StyledStatistics>
-      <div className="stats-title">Upload stats</div>
+      <div className="stats-title">{title}</div>
 
       <ul className="stats">
         {stats.map(({ label, id, percentage }) => {
@@ -23,11 +23,12 @@ function Statistics({ stats }) {
 }
 
 Statistics.propTypes = {
+  title: PropTypes.string.isRequired,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string,
-      label: PropTypes.string,
-      percentage: PropTypes.number,
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
     })
   ).isRequired,
 };
