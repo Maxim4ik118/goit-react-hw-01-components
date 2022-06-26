@@ -7,7 +7,7 @@ function Statistics({ title, stats = [] }) {
       <div className="stats-title">{title}</div>
 
       <ul className="stats">
-        {stats.map(({ label, id, percentage }) => {
+        {stats.length > 0 && stats.map(({ label, id, percentage }) => {
           const bgColor = '#' + Math.floor((Math.random() * 2 ** 16)).toString(16).padStart(6, 'f');
 
           return (

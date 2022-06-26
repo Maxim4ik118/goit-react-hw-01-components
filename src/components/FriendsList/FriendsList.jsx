@@ -4,10 +4,10 @@ import FriendListItem from './FriendListItem';
 
 import { StyledFriendsList } from './Styled';
 
-function FriendsList({ friends }) {
+function FriendsList({ friends = [] }) {
   return (
     <StyledFriendsList>
-      {friends.map(friend => (
+      {friends.length > 0 && friends.map(friend => (
         <FriendListItem key={friend.id} {...friend} />
       ))}
     </StyledFriendsList>

@@ -18,7 +18,7 @@ function TransactionHistory({ items = [] }) {
         </StyledTableCol>
       </StyledTableHead>
       <StyledTableBody>
-        {items.map((item, index) => {
+        {items.length > 0 && items.map((item, index) => {
           return (
             <StyledTableCol key={item.id}>
               <StyledTableCell
