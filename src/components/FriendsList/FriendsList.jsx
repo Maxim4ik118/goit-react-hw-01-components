@@ -7,9 +7,8 @@ import { StyledFriendsList } from './Styled';
 function FriendsList({ friends = [] }) {
   return (
     <StyledFriendsList>
-      {friends.length > 0 && friends.map(friend => (
-        <FriendListItem key={friend.id} {...friend} />
-      ))}
+      {friends.length > 0 &&
+        friends.map(friend => <FriendListItem key={friend.id} {...friend} />)}
     </StyledFriendsList>
   );
 }
